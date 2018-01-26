@@ -27,6 +27,7 @@ SELECT * FROM friends;
 call add_user('NewUserName', 'NewPass', 'FirstName', 'LastName', 'first@last.com', 17);
 
 -- 9: greeting : 
+SELECT email, greeting(fname) FROM users;
 
 -- 10: VG: hobby_friends(username) : 
 

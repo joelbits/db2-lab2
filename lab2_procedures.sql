@@ -70,3 +70,13 @@ INSERT INTO friends (u_id, f_id)
 VALUES (id_b, id_a);
 END //
 DELIMITER ;
+
+-- 9. greeting(): Function : Returns greeting together with user firstname. Usable like: SELECT email, greeting(fname) FROM users;
+DROP FUNCTION IF EXISTS greeting;
+DELIMITER //
+CREATE FUNCTION greeting(firstname VARCHAR(50))
+    RETURNS VARCHAR(50) DETERMINISTIC
+    BEGIN
+        RETURN CONCAT('Hello there, ', firstname, '!');
+    END //
+DELIMITER ;
