@@ -36,3 +36,25 @@ INSERT INTO usershobbies (u_id, h_id)
 VALUES (LAST_INSERT_ID(), 1);
 END //
 DELIMITER ;
+
+-- 6. deleteUser(id) : Procedure : Removes a user from users, specified by user.id
+DROP PROCEDURE IF EXISTS deleteUser;
+DELIMITER //
+CREATE PROCEDURE deleteUser(iid INT)
+BEGIN
+SET FOREIGN_KEY_CHECKS=0; -- to disable foreign key checks
+DELETE
+FROM friends
+WHERE u_id = iid;
+
+DELETE
+FROM usershobbies
+WHERE u_id = iid;
+
+DELETE  
+FROM users
+WHERE id = iid;
+
+SET FOREIGN_KEY_CHECKS=1; -- re-enable foreign key checks
+END //
+DELIMITER ;

@@ -16,6 +16,8 @@ call add_user('NEWUSERNAME', 'newpass', 'Olle', 'Olsson', 'olle@olsson.se', 47);
 -- SELECT * FROM usershobbies;
 
 -- 6: deleteUser(id) : 
+call deleteUser(10);
+SELECT * FROM users;
 
 -- 7: add_friendship(id_a, id_b) : 
 
