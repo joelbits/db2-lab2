@@ -16,10 +16,12 @@ call add_user('NEWUSERNAME', 'newpass', 'Olle', 'Olsson', 'olle@olsson.se', 47);
 -- SELECT * FROM usershobbies;
 
 -- 6: deleteUser(id) : 
-call deleteUser(10);
-SELECT * FROM users;
+-- call deleteUser(10);
+-- SELECT * FROM users;
 
 -- 7: add_friendship(id_a, id_b) : 
+call add_friendship(1, 2);
+SELECT * FROM friends;
 
 -- 8: agecheck :
 

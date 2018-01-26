@@ -58,3 +58,15 @@ WHERE id = iid;
 SET FOREIGN_KEY_CHECKS=1; -- re-enable foreign key checks
 END //
 DELIMITER ;
+
+-- 7. add_friendship(id_a, id_b) : Procedure : takes two user id and stores (id_a, id_b) and (id_b, id_a) in the friends table. Must exist 2 posts for correlation to work.
+DROP PROCEDURE IF EXISTS add_friendship;
+DELIMITER //
+CREATE PROCEDURE add_friendship(id_a INT, id_b INT)
+BEGIN
+INSERT INTO friends (u_id, f_id)
+VALUES (id_a, id_b);
+INSERT INTO friends (u_id, f_id)
+VALUES (id_b, id_a);
+END //
+DELIMITER ;
