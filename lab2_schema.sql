@@ -93,3 +93,9 @@ SELECT u.username as username,
 FROM users u
 JOIN friends f
 ON u.id = f.f_id;
+
+-- 3. user_email : Procedure : call user_email(); should give a list with email, fnamn and lnamn for all users in db.
+-- Code in lab2_procedures.sql
+
+-- 4. add_hobby(hobby) : Adds a hobby to the hobbies table
+-- Code in lab2_procedures.sql
