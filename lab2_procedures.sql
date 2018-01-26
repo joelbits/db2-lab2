@@ -80,3 +80,16 @@ CREATE FUNCTION greeting(firstname VARCHAR(50))
         RETURN CONCAT('Hello there, ', firstname, '!');
     END //
 DELIMITER ;
+
+-- 10. hobby_friends(username) : Stored Procedure : Given a username, returns a list with usernames with the same hobbies as given user.
+
+
+-- 11. suggest_friends(username) : Stored Procedure : For username, gives a list of users that is not a friend, but is a friend of a friend
+
+
+-- 12. users_edits : 
+--  - A Table for logging changes in users table
+--  
+--  - Triggers that write a row in users_edits when table updates/deletes/writes...
+
+-- Gör en tabell för loggar när tabellen users ändras. Tabellen ska ha kolumnen edited (TIMESTAMP NOT NULL default CURRENT_TIMESTAMP, och kolumnen action VARCHAR(6) NOT NULL. Gör sedan triggers som skriver en rad i user_edits när tabellen user ändrats med en timestamp och texten "insert", "update" eller "delete".
