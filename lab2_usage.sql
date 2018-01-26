@@ -30,6 +30,7 @@ call add_user('NewUserName', 'NewPass', 'FirstName', 'LastName', 'first@last.com
 SELECT email, greeting(fname) FROM users;
 
 -- 10: VG: hobby_friends(username) : 
+call hobby_friends('cbouldon');
 
 -- 11: VG: suggest_friends(username) : 
 

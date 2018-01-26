@@ -82,7 +82,15 @@ CREATE FUNCTION greeting(firstname VARCHAR(50))
 DELIMITER ;
 
 -- 10. hobby_friends(username) : Stored Procedure : Given a username, returns a list with usernames with the same hobbies as given user.
-
+DROP PROCEDURE IF EXISTS hobby_friends;
+DELIMITER //
+CREATE PROCEDURE hobby_friends(uname VARCHAR(30))
+BEGIN
+    SELECT u.username, u.email
+    FROM users u
+    WHERE u.username = uname;
+END //
+DELIMITER ;
 
 -- 11. suggest_friends(username) : Stored Procedure : For username, gives a list of users that is not a friend, but is a friend of a friend
 
