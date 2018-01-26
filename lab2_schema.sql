@@ -76,6 +76,8 @@ insert into usershobbies (u_id, h_id) values (8, 1), (8, 3), (8, 5);
 insert into usershobbies (u_id, h_id) values (9, 1), (9, 3), (9, 4);
 insert into usershobbies (u_id, h_id) values (10, 1), (10, 3), (10, 5);
 
--- 1. all_users : View : 
+-- 1. all_users : View : Returns one col for username and one with number_of_friends where number of friends is calculated
 CREATE VIEW all_users AS
-SELECT * FROM users;
+SELECT u.username, 
+  (SELECT COUNT(*) FROM friends WHERE u_id = u.id) as 'number_of_friends'
+FROM users u;
