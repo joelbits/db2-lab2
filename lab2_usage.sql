@@ -3,6 +3,8 @@
 SELECT * FROM all_users;
 
 -- 2: friends_list : 
+SELECT * FROM friends_list;
+SELECT * FROM friends_list WHERE username = "cbouldon";
 
 -- 3: user_email() : 
 

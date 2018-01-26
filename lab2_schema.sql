@@ -81,3 +81,15 @@ CREATE VIEW all_users AS
 SELECT u.username, 
   (SELECT COUNT(*) FROM friends WHERE u_id = u.id) as 'number_of_friends'
 FROM users u;
+
+-- 2. friends_list : View : 
+CREATE VIEW friends_list AS
+SELECT u.username as username,
+  (
+    SELECT CONCAT(fname, ' ', lname) 
+    FROM users 
+    WHERE id = f.u_id
+  ) as 'friendname'
+FROM users u
+JOIN friends f
+ON u.id = f.f_id;
