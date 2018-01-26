@@ -97,5 +97,8 @@ ON u.id = f.f_id;
 -- 3. user_email : Procedure : call user_email(); should give a list with email, fnamn and lnamn for all users in db.
 -- Code in lab2_procedures.sql
 
--- 4. add_hobby(hobby) : Adds a hobby to the hobbies table
+-- 4. add_hobby(hobby) : Stored Procedure : Adds a hobby to the hobbies table
+-- Code in lab2_procedures.sql
+
+-- 5. add_user(username, pass, fname, lname, email, age) : Stored Procedure : 
 -- Code in lab2_procedures.sql

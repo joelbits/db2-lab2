@@ -11,6 +11,9 @@ SELECT * FROM friends_list WHERE username = "cbouldon";
 -- 4: add_hobby(hobby) :
 
 -- 5: add_user(username, pass, fname, lname, email, age) : 
+call add_user('NEWUSERNAME', 'newpass', 'Olle', 'Olsson', 'olle@olsson.se', 47);
+-- SELECT * FROM users;
+-- SELECT * FROM usershobbies;
 
 -- 6: deleteUser(id) : 
 
