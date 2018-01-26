@@ -23,7 +23,8 @@ call add_user('NEWUSERNAME', 'newpass', 'Olle', 'Olsson', 'olle@olsson.se', 47);
 call add_friendship(1, 2);
 SELECT * FROM friends;
 
--- 8: agecheck :
+-- 8: agecheck : This should result in SQL Error, because user below 18. The trigger agecheck is triggered.
+call add_user('NewUserName', 'NewPass', 'FirstName', 'LastName', 'first@last.com', 17);
 
 -- 9: greeting : 
 
